@@ -24,7 +24,7 @@ WordPress（Gutenberg ブロック）用のソース `wordpress-source.html` を
 - **Fukuoka**
 - **Okinawa** — 今帰仁 / 越原 / 久貝 / 金武
 - **Sapporo** — Suzuran
-- **Kanazawa** — 凛 (Rin) / 奈々 (Nana) / 南町（仮称・詳細文言は仮テキスト）
+- **Kanazawa** — 凛 (Rin) / 奈々 (Nana) / 南町
 
 ## GitHub Pages で公開する場合
 
