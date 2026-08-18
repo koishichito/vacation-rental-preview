@@ -6,12 +6,19 @@ WordPress（Gutenberg ブロック）用のソース `wordpress-source.html` を
 
 | ファイル | 内容 |
 |---|---|
-| `index.html` | プレビュー用ページ。WordPressブロックソースを、レイアウトを再現するCSSで包んだ自己完結HTML。 |
+| `index.html` | プレビュー用ページ（日本語版）。WordPressブロックソースを、レイアウトを再現するCSSで包んだ自己完結HTML。 |
 | `wordpress-source.html` | WordPressに貼り付ける元のブロックソース（変更用ソース　羽田taji.html のコピー）。 |
+| `en.html` | プレビュー用ページ（英語版）。日本語版の更新を反映した英訳版。 |
+| `wordpress-source-en.html` | 英語版ページ用に WordPress に貼り付けるブロックソース（en-version.html のコピー）。 |
 
 ## 見方
 
-`index.html` をブラウザで開くだけです（ダブルクリック）。
+`index.html`（日本語版）または `en.html`（英語版）をブラウザで開くだけです（ダブルクリック）。
+
+公開URL:
+
+- 日本語版: https://koishichito.github.io/vacation-rental-preview/
+- 英語版: https://koishichito.github.io/vacation-rental-preview/en.html
 
 - 画像は公開サーバー `vacation-rental.jnavi.co.jp` から読み込みます（要インターネット接続）。
 - 実際のWordPressテーマのCSSとは細部のデザインが異なります。あくまで内容・構成の確認用です。
