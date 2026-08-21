@@ -1,0 +1,70 @@
+/* =====================================================================
+   物件一覧ページ（/detail・/detail-en）用 ブロックレイアウト補完CSS
+   WordPress管理画面 → 外観 → カスタマイズ → 追加CSS に貼り付けてください。
+
+   背景: テーマ jnavi-wp の footer.php に wp_footer() が無いため、
+   WordPress標準のカラム/カバー用CSSが出力されず、画像が縦一列に
+   並んでしまう。このCSSはプレビュー（GitHub Pages）と同じ見た目を
+   再現するための補完です。
+   ===================================================================== */
+
+/* ---- カラム（画像・テキストの横並び） ---- */
+.wp-block-columns {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 0 1.5rem;
+  align-items: flex-start;
+}
+.wp-block-columns.are-vertically-aligned-center { align-items: center; }
+.wp-block-column { flex: 1 1 0; min-width: 0; }
+.wp-block-column[style*="flex-basis"] { flex-grow: 0; flex-shrink: 0; }
+@media (max-width: 781px) {
+  .wp-block-columns { flex-wrap: wrap; gap: 1rem; }
+  .wp-block-column,
+  .wp-block-column[style*="flex-basis"] { flex: 1 1 100% !important; }
+}
+
+/* ---- 画像 ---- */
+.wp-block-image { margin: 0 0 .4rem; }
+.wp-block-image img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 4px; }
+.wp-block-image figure, figure.wp-block-image { margin: 0; }
+.concept-image img { border-radius: 8px; box-shadow: 0 6px 24px rgba(0, 0, 0, .12); }
+
+/* ---- 予約ボタン・アクティビティボタン（巨大化防止） ---- */
+.booking-btn img,
+.activity-btn img { max-width: 280px; margin-inline: auto; border-radius: 6px; }
+
+/* ---- カバー（都市名ヘッダーの背景画像） ---- */
+.wp-block-cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  overflow: hidden;
+  margin: 0 0 1.2rem;
+  padding: 1rem;
+  text-align: center;
+}
+.wp-block-cover .wp-block-cover__image-background {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center center;
+}
+.wp-block-cover__background { position: absolute; inset: 0; background: rgba(0, 0, 0, .2); }
+.wp-block-cover__background.has-background-dim-0 { background: transparent; }
+.wp-block-cover__inner-container { position: relative; z-index: 2; }
+.wp-block-cover .page-title { color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .45); }
+
+/* ---- 設備リスト（Otter アイコンリスト） ---- */
+.wp-block-themeisle-blocks-icon-list { list-style: none; padding: 0; margin: 0; }
+.wp-block-themeisle-blocks-icon-list-item { display: flex; align-items: flex-start; gap: .55em; margin-bottom: .45em; }
+.wp-block-themeisle-blocks-icon-list-item i { color: #bd0b0b; margin-top: .45em; font-size: .85em; flex: none; }
+.wp-block-themeisle-blocks-icon-list-item p { margin: 0; }
+
+/* ---- スペーサー（スマホで余白を詰める） ---- */
+@media (max-width: 781px) { .wp-block-spacer { max-height: 48px; } }

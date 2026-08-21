@@ -10,6 +10,7 @@ WordPress（Gutenberg ブロック）用のソース `wordpress-source.html` を
 | `wordpress-source.html` | WordPressに貼り付ける元のブロックソース（変更用ソース　羽田taji.html のコピー）。 |
 | `en.html` | プレビュー用ページ（英語版）。日本語版の更新を反映した英訳版。 |
 | `wordpress-source-en.html` | 英語版ページ用に WordPress に貼り付けるブロックソース（en-version.html のコピー）。 |
+| `wordpress-additional.css` | **WordPress の「外観 → カスタマイズ → 追加CSS」に貼るCSS。** テーマ jnavi-wp は footer.php に wp_footer() が無く、カラム等のブロック用CSSが出力されないため、これを貼らないと画像が縦一列に並ぶ。/detail・/detail-en 共通。 |
 
 ## 見方
 
